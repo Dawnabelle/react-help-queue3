@@ -1,5 +1,5 @@
-import React from "react";
-import Ticket from "./Tickets";
+import React from 'react';
+import Ticket from './Tickets';
 
 function TicketList(){
   return(
