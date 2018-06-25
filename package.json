@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "lint": "eslint src/index.jsx src/**/**; exit 0"
+    "lint": "eslint src/index.jsx src/**/**; exit 0",
+    "lint-fix": "eslint src/index.jsx src/**/** --fix; exit 0"
   },
   "author": "",
   "license": "ISC",
