@@ -13,6 +13,12 @@ function MyStyledComponent() {
       <h3>Unlike other components you have worked with thus far....</h3>
       <h4>I also include custom CSS styles!</h4>
       <p>Pretty cool, right</p>
+      <p className="red-text">only this paragraph will get the style</p>
+      <style jsx>{`
+        .red-text {
+          color:red;
+        }
+      `}</style>
     </div>
   );
 }
