@@ -11,7 +11,7 @@ function Ticket(props){
         .test {
           font-family: cursive;
         }
-        .overwrite {
+        .overwrite:hover {
           color: blue;
         }
       `}</style>
