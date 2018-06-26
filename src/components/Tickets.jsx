@@ -8,9 +8,15 @@ function Ticket(props){
         div {
           background-color: red;
         }
+        .test {
+          font-family: cursive;
+        }
+        .overwrite {
+          color: blue;
+        }
       `}</style>
-      <h3>{props.location} - {props.names}</h3>
-      <p><em>{props.issue}</em></p>
+    <h3 className="test">{props.location} - {props.names}</h3>
+      <p className="overwrite"><em>{props.issue}</em></p>
       <hr/>
     </div>
   );
