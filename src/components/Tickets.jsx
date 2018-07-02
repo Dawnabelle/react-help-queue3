@@ -15,7 +15,7 @@ function Ticket(props){
           color: blue;
         }
       `}</style>
-    <h3 className="test">{props.location} - {props.names}</h3>
+      <h3 className="test">{props.location} - {props.names}</h3>
       <p className="overwrite"><em>{props.issue}</em></p>
       <hr/>
     </div>
