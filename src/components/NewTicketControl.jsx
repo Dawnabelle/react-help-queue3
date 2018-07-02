@@ -6,19 +6,27 @@ class NewTicketControl extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      formVisibileOnPage: false
+      formVisibleOnPage: false
     };
     // this.handleClick = this.handleClick.bind(this);
   }
 
   // handleClick(){
-  //   this.setState({formVisibileOnPage: true});
-  //   console.log('formVisibleOnPage is currently set to:' + this.state.formVisibileOnPage);
+  //   this.setState({formVisibleOnPage: true});
+  //   console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
   // }
 
   render(){
+    let currentlyVisibleContent = null;
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleContent = <newTicketForm />;
+    } else {
+      currentlyVisibleContent = <ConfirmationQuestions />;
+    }
     return(
-      <ConfirmationQuestions/>
+      <div>
+        {currentlyVisibleContent}
+      </div>
     );
   }
 }
