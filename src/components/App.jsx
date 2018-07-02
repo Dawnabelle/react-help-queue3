@@ -2,9 +2,9 @@ import React from 'react';
 import Header from './Header';
 import TicketList from './TicketList';
 import MyStyledComponent from './MyStyledComponent';
-import ticket from '../assets/images/ticket.jpg';
 import {Switch, Route} from 'react-router-dom';
 import NewTicketForm from './NewTicketForm.jsx';
+import Error404 from './Error404.jsx';
 
 function App(){
   return (
@@ -13,8 +13,8 @@ function App(){
       <Switch>
         <Route exact path='/' component={TicketList}/>
         <Route path='/newticket' component={NewTicketForm}/>
+        <Route component={Error404}/>
       </Switch>
-      <img src={ticket}/>
     </div>
   );
 }
