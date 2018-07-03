@@ -6,7 +6,7 @@ function Ticket(props){
     <div>
       <style jsx>{`
         div {
-          background-color: red;
+          background-color: #9999ff;
         }
         .test {
           font-family: cursive;
