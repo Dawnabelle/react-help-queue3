@@ -16,17 +16,18 @@ function Ticket(props){
         }
       `}</style>
       <h3 className="test">{props.location} - {props.names}</h3>
+      <h4>{props.formattedWaitTime} ago</h4>
       <p className="overwrite"><em>{props.issue}</em></p>
       <hr/>
     </div>
   );
 }
 
-
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  issue: PropTypes.string
+  issue: PropTypes.string,
+  formattedWaitTime: PropTypes.string.isRequired
 };
 
 export default Ticket;
