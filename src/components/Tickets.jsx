@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Ticket(props){
-  return (
+  const ticketInformation =
     <div>
       <style jsx>{`
         div {
@@ -19,15 +19,28 @@ function Ticket(props){
       <h4>{props.formattedWaitTime} ago</h4>
       <p className="overwrite"><em>{props.issue}</em></p>
       <hr/>
-    </div>
-  );
+    </div>;
+  if (props.currentRouterPath === '/admin') {
+    return (
+      <div onClick={()=>{alert('he, you just clikced the ticket belonging to ' + props.names);}}>
+        {ticketInformation}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        {ticketInformation}
+      </div>
+    );
+  }
 }
 
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   issue: PropTypes.string,
-  formattedWaitTime: PropTypes.string.isRequired
+  formattedWaitTime: PropTypes.string.isRequired,
+  currentRouterPath: PropTypes.string
 };
 
 export default Ticket;
