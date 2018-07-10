@@ -7,6 +7,7 @@ import {Switch, Route} from 'react-router-dom';
 import Moment from 'moment';
 import Admin from './Admin';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
 
@@ -63,6 +64,10 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  masterTicketList: PropTypes.object
+};
 
 const mapStateToProps = state => {
   return {
