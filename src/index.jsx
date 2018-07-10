@@ -7,7 +7,6 @@ import { createStore } from 'redux';
 import ticketListReducer from './reducers/ticket-list-reducer';
 import { Provider } from 'react-redux';
 
-
 const store = createStore(ticketListReducer);
 
 let unsubscribe = store.subscribe(() =>
