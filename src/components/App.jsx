@@ -6,7 +6,7 @@ import Error404 from './Error404.jsx';
 import {Switch, Route} from 'react-router-dom';
 import Moment from 'moment';
 import Admin from './Admin';
-import {v4} from 'uuid';
+import { connect } from 'react-redux';
 
 class App extends React.Component {
 
@@ -64,4 +64,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect()(App);
